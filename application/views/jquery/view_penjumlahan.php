@@ -11,10 +11,10 @@
 <body>
   <h2>Form Penjumlahan</h2>
   <div>
-    <input type="number" id="nilai1" placeholder="Nilai 1">
+    <input type="number" id="nilai1" placeholder="Nilai 1" class="input-penjumlahan">
   </div>
   <div>
-    <input type="number" id="nilai2" placeholder="Nilai 2">
+    <input type="number" id="nilai2" placeholder="Nilai 2" class="input-penjumlahan">
   </div>
   <div>
     <button id="btnresult">Result</button>
@@ -22,7 +22,7 @@
   </div>
   <div>
     <label for="">Hasil</label>
-    <input type="number" id="result" readonly>
+    <input type="number" id="result" readonly class="input-penjumlahan">
   </div>
 
 
@@ -38,10 +38,12 @@
       })
 
       $('#btnreset').click(() => {
-        let 
+        let inputNumber = $('.input-penjumlahan')
+        inputNumber.each((index, element) => {
+          $(element).val(null)
+        })
       })
     })
-    
   </script>
 
 </body>
